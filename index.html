@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cup of Joy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img class="logo" src="Images/icon.png" alt="">
+        </a>  
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#products">Products</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        <div class="icons">
+                <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
+                <div class="fas fa-heart" id="wishlist-btn"></div>
+                <div class="fa-solid fa-cart-shopping" id="cart-btn"></div>
+                <div class="fa-solid fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here..">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <div class="content">
+                    <div class="head"><h2>My Cart</h2></div>
+                    <div id="cartItem">Your cart is empty</div>
+                    <div class="foot">
+                        <h3>Total</h3>
+                        <h3 id="total">₹ 0.00</h3>
+                    </div>
+                    <button id="checkoutButton">Checkout now</button>
+                </div>
+            </div>
+        </div>
+     
+        
+        <div class="wishlist-container">
+            <div class="wish-list">
+                <div class="content">
+                    <div class="head"><h2>Wishlist collection</h2></div>
+                    <div id="wishItem">Your wishlist is empty</div>
+                </div>
+            </div>
+        </div>
+              
+    </header>
+
+
+    <section class="home" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide" style="background-image: url('Images/hero.jpg');">
+                    <div class="content">
+                        <h1>Discover the Magic in Every Sip <br> at Cup of Joy <i class="fa-regular fa-face-smile-beam"></i></h1>
+                        <button><a href="#contact">Join us for a taste</a></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background-image: url('Images/s2.jpg');">
+                    <div class="content">
+                        <h1>Find Your Moment of Zen with Each Morning Blend</h1>
+                        <button><a href="#contact">Join us for a taste</a></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background-image: url('Images/s3.jpg');">
+                    <div class="content">
+                        <h1>Elevate Your Coffee Moment in Our Haven of Opulent Tranquility</h1>
+                        <button><a href="#contact">Join us for a taste</a></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background-image: url('Images/s4.jpg');">
+                    <div class="content">
+                        <h1>Where Every Corner Whispers Elegance, and Every Sip Feels like a Celebration</h1>
+                        <button><a href="#contact">Join us for a taste</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    
+            
+    <section class="about" id="about">
+        <h1 class="heading"><span>ABOUT</span>&nbsp; US</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="Images/about_us.jpg" alt="coffee">
+            </div>
+            <div class="content">
+                <h2>What Makes Our Coffee Special?</h2>
+                <p>Experience the essence of exceptional flavor with every sip at
+                    our coffee shop. Crafted with passion and precision, our coffee stands
+                    out for its unique blend of premium beans sourced from the world's finest growers.
+                    Each cup is meticulously prepared to perfection by our skilled baristas, 
+                    ensuring a harmonious balance of rich aroma and indulgent taste. From the first 
+                    sip to the last, immerse yourself in a journey of unparalleled quality and 
+                    satisfaction. Discover what makes our coffee truly special – a testament 
+                    to our commitment to excellence and your ultimate coffee experience.</p>
+                    <p>"Are you ready to taste something truly special? Because like our coffee, you're one of a kind."</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="menu" id="menu">
+        <h1 class="heading">OUR &nbsp;<span>MENU</span></h1>
+            <div class="box-container">
+                <div class="box">
+                        <img src="Images/card1.jpg" alt="">
+                        <h3>Classic Brew</h3>
+                        <div class="price">₹20<span>₹29</span></div>
+                        <a class="btn" onclick="addtocart(0)">Add to cart</a>
+                    </div>
+
+                <div class="box">
+                    <img src="Images/card2.jpg" alt="">
+                    <h3>Creamy Latte</h3>
+                    <div class="price">₹26<span>₹39</span></div>
+                    <a class="btn" onclick="addtocart(1)">Add to cart</a>  
+                </div>
+
+                <div class="box">
+                    <img src="Images/card3.jpg" alt="">
+                    <h3>Tasty and Healthy Boost</h3>
+                    <div class="price">₹31<span>₹39</span></div>
+                    <a class="btn" onclick="addtocart(2)">Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="Images/card4.jpg" alt="">
+                    <h3>Morning Blend</h3>
+                    <div class="price">₹29<span>₹39</span></div>
+                    <a class="btn" onclick="addtocart(3)">Add to cart</a>                
+                </div>
+
+                <div class="box">
+                    <img src="Images/card5.jpg" alt="">
+                    <h3>Golden Mist Espresso</h3>
+                    <div class="price">₹40<span>₹49</span></div>
+                    <a class="btn" onclick="addtocart(4)">Add to cart</a>               
+                </div>
+
+                <div class="box">
+                    <img src="Images/card6.jpg" alt="">
+                    <h3>Bold Mocha</h3>
+                    <div class="price">₹36<span>₹39</span></div>
+                    <a class="btn" onclick="addtocart(5)">Add to cart</a>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="products" id="products">
+
+        <h1 class="heading">OUR &nbsp;<span>PRODUCTS</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart" onclick="addtocart(6)"></a>
+                    <a class="fas fa-heart" onclick="addtowish(6)"></a>                
+                </div>
+                <div class="image">
+                    <img src="Images/card7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Dark Roast Delicacy</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹152 <span>₹179</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart" onclick="addtocart(7)"></a>
+                    <a class="fas fa-heart" onclick="addtowish(7)"></a>                
+                </div>
+                <div class="image">
+                    <img src="Images/card8.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3> Dusk Blend Doppio</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹186 <span>₹195</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart" onclick="addtocart(8)"></a>
+                    <a class="fas fa-heart" onclick="addtowish(8)"></a>                
+                </div>
+                <div class="image">
+                    <img src="Images/card9.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Midnight Magic Blends</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹292 <span>₹324</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="review" id="review">
+        <h1 class="heading">CUSTOMER'S &nbsp;<span>REVIEW</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-quote-right" id="quote"></i>
+                <p>
+                    Absolutely love the ambiance and the delightful aroma that fills the air as soon as you step into this coffee haven. 
+                    The baristas are incredibly skilled, crafting each cup with precision and care. 
+                    From the first sip to the last, every moment spent here feels like a warm embrace. 
+                    Definitely my go-to spot for a perfect cup of coffee!
+                </p>
+
+                <img src="Images/r1.jpg" alt="">
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-quote-right" id="quote"></i>
+                <p>
+                    This coffee shop has truly raised the bar when it comes to quality and taste.
+                    The variety of beans they offer ensures there's something for every palate.
+                    Whether it's a rich and bold espresso or a smooth and creamy latte, 
+                    each drink is masterpiece. The friendly staff only 
+                    add to a charm. I can't recommend this place enough!
+                </p>
+
+                <img src="Images/r2.jpg" alt="">
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fa-sharp fa-solid fa-quote-right" id="quote"></i>
+                <p>
+                    What a gem of a coffee shop! The moment I walked in, I was greeted by
+                    the inviting aroma of freshly roasted beans. The coffee selection is diverse,
+                    and each cup is brewed to perfection. The cozy atmosphere and attentive staff
+                    make it the perfect spot to unwind and enjoy a delicious cup of joe.Can't wait to come back for more.
+                </p>
+
+                <img src="Images/r3.jpg" alt="">
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>CONTACT</span>&nbsp; US</h1>
+        <div class="row">
+            <div class="map">
+                <iframe id="loc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7480.2476467420565!2d78.37831948868757!3d14.845155091294638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb473fce4c10fef%3A0xf0a22507a11dbbe6!2sJammalamadugu%2C%20Andhra%20Pradesh%20516434!5e0!3m2!1sen!2sin!4v1711691124248!5m2!1sen!2sin" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="content">
+                <form class="form" id="contact-form" action="">
+                    <h3>GET IN TOUCH</h3>
+                    <div class="inputBox">
+                        <span class="fas fa-user"></span>
+                        <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z]" title="Please enter alphabetic characters only" required>
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-envelope"></span>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-phone"></span>
+                        <input type="tel" id="number" name="number" placeholder="Phone Number" pattern="[0-9]{10}" title="Please enter 10 digit mobile number" required> 
+                    </div>
+                    <div class="thank-you-message" id="thank-you-message" style="display: none;">
+                        Thank you. we will get back to you soon..
+                    </div>
+                    <button id="contact-button">Contact Now</button>       
+                </form>
+            </div>            
+        </div>
+    </section>
+    
+    
+
+    <footer class="footer">
+        <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="copy-right">
+            <p>Created BY SPK | All Rights Reserved <i class="fa-regular fa-copyright"></i></i>2024</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
