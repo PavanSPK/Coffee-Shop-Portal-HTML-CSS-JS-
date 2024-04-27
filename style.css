@@ -170,7 +170,7 @@ section{
 .header .wishlist-container{
     position: absolute;
     top: 110%;right:-100%;
-    width: 24rem;
+    width: 25rem;
     background: #fff;
     transition: right 0.5s ease-in-out;   
 }
